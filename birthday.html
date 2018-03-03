@@ -1,0 +1,101 @@
+<!-- =======================================================================
+
+Developed by - Debargha Roy ( https://www.linkedin.com/in/debargha-roy/ )
+
+=========================================================================-->
+
+<!DOCTYPE html>
+<html>
+<title>Happy Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.btn-custom {
+  background: none;
+  border: 2px solid #ffffff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.btn-custom:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+</style>
+<body>
+<script type="text/javascript">
+if(!navigator.onLine){
+  if(confirm('Seems like you are not connected to the internet...\n\n Make sure you have and active internet connection and try again...'))
+  { window.location.reload();}
+}
+</script>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge" id="displaydate"></div>
+
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top w3-center" id="wish">May be you're late, or may be you're early</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%" id="remaining">
+    <p class="w3-large w3-center" id="wish2">
+      On this Special Day, may the Almighty shower his blessing on you. <br>
+      May the year fulfil your dreams, and may your life fill with happiness and prosperity <br><br>
+      And... a birthday without a gift is kind of... A BENGALI WITHOUT FISH! 😆😂😝 <br><br> So, here's your gift... <br><br>
+      <button type="button" class="btn-custom" name="button" onclick="opengift()">Open Gift</button>
+    </p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var d = new Date();  var m = new Date();  var y = new Date();  var dd = d.getDate();  var mm = m.getMonth();  var yy = y.getFullYear();
+    var month; var sup;
+    switch (dd) { case 1: sup="st"; break; case 2: sup="nd"; break; case 3: sup="rd"; break; default: sup="th"; }
+    switch (mm) {
+      case 0: month="January"; break; case 1: month="February"; break; case 2: month="March"; break;
+      case 3: month="April"; break; case 4: month="May"; break; case 5: month="June"; break;
+      case 6: month="July"; break; case 7: month="August"; break; case 8: month="September"; break;
+      case 9: month="October"; break; case 10: month="November"; break; case 11: month="December"; break;
+    }
+    var cdate=month+" "+dd+"<sup>"+sup+"</sup>"+", "+yy;
+    document.getElementById('displaydate').innerHTML=cdate;
+    if(dd==3&&mm==11) {
+      document.getElementById('wish').innerHTML='Happy Birthday Sajal!';
+    }
+    else if (dd>3&&mm==11) {
+      document.getElementById('wish').innerHTML='Belated Happy Birthday Sajal!';
+    }
+    else {
+      document.getElementById('remaining').style.display="none";
+      document.getElementById('wish2').innerHTML="See you on your birthday!";
+    }
+
+    function opengift() {
+      if(confirm('Please ensure you have 10 min to spare and you have your earphones/headphones plugged in. \n Also there will be 3 tabs opening, so make sure you have a look into all 3 tabs'))
+      {window.open("https://www.launchora.com/story/welcome-to-twentys");
+      window.open("https://gaana.com/album/secret-superstar");
+      window.open("https://www.youtube.com/watch?v=JXaE6cPaJYo");}
+    }
+
+  </script>
+
+  <div class="w3-display-bottomright w3-padding-large w3-text-white">
+    Debargha Roy
+  </div>
+
+
+</body>
+</html>
