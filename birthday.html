@@ -54,7 +54,7 @@ if(!navigator.onLine){
     <p class="w3-large w3-center" id="wish2">
       On this Special Day, may the Almighty shower his blessing on you. <br>
       May the year fulfil your dreams, and may your life fill with happiness and prosperity <br><br>
-      And... a birthday without a gift is kind of... A BENGALI WITHOUT FISH! 😆😂😝 <br><br> So, here's your gift... <br><br>
+      So, here's your gift... <br><br>
       <button type="button" class="btn-custom" name="button" onclick="opengift()">Open Gift</button>
     </p>
     </div>
@@ -73,10 +73,12 @@ if(!navigator.onLine){
     var cdate=month+" "+dd+"<sup>"+sup+"</sup>"+", "+yy;
     document.getElementById('displaydate').innerHTML=cdate;
     if(dd==3&&mm==11) {
-      document.getElementById('wish').innerHTML='Happy Birthday Sajal!';
+      <!-- Replace date with whatever needed-->
+      document.getElementById('wish').innerHTML='Happy Birthday <name>!';
     }
     else if (dd>3&&mm==11) {
-      document.getElementById('wish').innerHTML='Belated Happy Birthday Sajal!';
+      <!-- Replace date with whatever needed-->
+      document.getElementById('wish').innerHTML='Belated Happy Birthday <name>!';
     }
     else {
       document.getElementById('remaining').style.display="none";
@@ -84,10 +86,8 @@ if(!navigator.onLine){
     }
 
     function opengift() {
-      if(confirm('Please ensure you have 10 min to spare and you have your earphones/headphones plugged in. \n Also there will be 3 tabs opening, so make sure you have a look into all 3 tabs'))
-      {window.open("https://www.launchora.com/story/welcome-to-twentys");
-      window.open("https://gaana.com/album/secret-superstar");
-      window.open("https://www.youtube.com/watch?v=JXaE6cPaJYo");}
+      if(confirm('Ready?'))
+      {window.open("https://www.launchora.com/story/welcome-to-twentys");}
     }
 
   </script>
