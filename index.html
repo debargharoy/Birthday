@@ -59,10 +59,10 @@
     <div class="w3-display-topleft w3-padding-large w3-xlarge" id="displaydate"></div>
 
     <div class="w3-display-middle main-content" id="content1">
-        <h1 class="w3-jumbo w3-animate-top w3-center" id="wish">May be you're late, or may be you're early</h1>
+        <h1 class="w3-jumbo w3-animate-top w3-center" id="wish">Happy Birthday Shubhi! </h1>
         
         <p class="w3-large w3-center" id="wish2">
-             <br> A tad bit too early. <br><br>
+            <br> A tad bit too early. <br><br>
             <button type="button" class="btn-custom" name="button" onclick="opengift()">Open Gift</button>
         </p>
     </div>
@@ -112,17 +112,18 @@
           <!-- Replace date with whatever needed-->
           document.getElementById('wish').innerHTML='Happy Birthday Shubhi!';
         }
-        else if (dd>3&&mm==11) {
+        else if (dd>13&&mm==5) {
           <!-- Replace date with whatever needed-->
           document.getElementById('wish').innerHTML='Belated Happy Birthday Shubhi!';
         }
         else {
           document.getElementById('remaining').style.display="none";
-          document.getElementById('wish2').innerHTML="See you on your birthday!";
+          document.getElementById('wish2').innerHTML='See you on your birthday!';
         }
     
         function opengift() {
-            document.getElementById("content1").style.display="none";
+            if(dd!=13&&mm==5) {alert("It's not time yet!\nPlease check back at May 13, 00:00 Hrs"); return;}
+            document.getElementById("content1").style.display="none";            
             document.getElementById("content2").style.display="block";
         }
     
